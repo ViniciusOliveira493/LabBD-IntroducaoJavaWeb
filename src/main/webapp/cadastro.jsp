@@ -8,8 +8,8 @@
 	<body>
 		<nav id="menu">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="cadastro.html">Cadastro</a></li>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="cadastro.jsp">Cadastro</a></li>
 			</ul>		
 		</nav>
 		<main>
@@ -58,7 +58,7 @@
 		
 			<div class="container" align = "center">
 				<p class="title">Cadastro de Pessoas</p>
-				<form action="" method="post">
+				<form action="pessoa" method="post">
 					<table>
 						<tr>
 							<td>
