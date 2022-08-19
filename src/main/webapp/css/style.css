@@ -22,20 +22,24 @@ input[type=submit]:hover{
 	background-color: var(--destaque);
 }
 
+#menu{
+	background-color: var(--principal);
+	min-height:35px;
+}
 #menu ul{
 	padding:0px;
 	margin:0px;	
-	list-style: none;
-	background-color: var(--principal);
+	list-style: none;	
 	font-size:18px;
-	
+	float:right;
 }
 #menu ul li{
 	display:inline;	
 }
 #menu ul li a{
 	font-size:18px;
-	padding: 2px 10px;
+	padding: 5px 10px;
+	padding-bottom:6px;
 	display: inline-block;
 	background-color: var(--principal);
 	color: #FFFEFD;
@@ -47,7 +51,6 @@ input[type=submit]:hover{
 	background-color: white;
 	border-bottom:3px solid var(--destaque);
 }
-
 .container{
 	margin: auto;
 	width: 50%;
