@@ -1,5 +1,6 @@
 package controller;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,6 +10,8 @@ import model.Pessoa;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/pessoa")
 public class PessoaServlet extends HttpServlet {
@@ -27,7 +30,21 @@ public class PessoaServlet extends HttpServlet {
 		p.setId(Integer.parseInt(idParam));
 		p.setNome(nome);
 		p.setDataNasc(Date.valueOf(dateParam));
-		System.out.println(p);
+		
+		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		pessoas.add(p);
+		
+		Pessoa p2 = new Pessoa();
+		p2.setId(Integer.parseInt("2"));
+		p2.setNome("Roberto");
+		p2.setDataNasc(Date.valueOf("2000-06-07"));
+		pessoas.add(p2);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("cadastro.jsp");
+		request.setAttribute("pessoa", p);
+		request.setAttribute("pessoas", pessoas);
+		
+		rd.forward(request, response);
 	}
 
 }
