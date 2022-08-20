@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -53,7 +56,6 @@
 			</div>
 		-->
 			<br/>
-			<br/>
 			
 		
 			<div class="container" align = "center">
@@ -83,6 +85,49 @@
 					</table>
 				</form>
 			</div>
+			<br/>
+			<!--
+			<div>
+				<c:if test="${not empty pessoa}">
+					<c:out value="${pessoa.id}"/> -
+					<c:out value="${pessoa.nome}"/>
+				</c:if>
+			</div>
+			-->
+			<c:if test="${not empty pessoas}">
+				<div class="container">				
+					<table id="pessoas" border="1">
+						<thead>
+							<tr>
+								<th>
+									#ID
+								</th>
+								<th>
+									Nome
+								</th>
+								<th>
+									Data de Nascimento
+								</th>
+							</tr>
+						</thead>
+						<tbody>						
+							<c:forEach items = "${pessoas}" var="p">
+								<tr>
+									<td align="center">
+										<c:out value="${p.id}"/>
+									</td>									
+									<td>
+										<c:out value="${p.nome}"/>
+									</td>									
+									<td align="center">
+										<c:out value="${p.dataNasc}"/>
+									</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>				
+				</div>
+			</c:if>
 		</main>
 	</body>
 </html>

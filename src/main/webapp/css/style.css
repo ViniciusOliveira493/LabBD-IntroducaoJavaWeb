@@ -51,13 +51,21 @@ input[type=submit]:hover{
 	background-color: white;
 	border-bottom:3px solid var(--destaque);
 }
+#pessoas{
+	margin:auto;
+	margin-top:5%;
+	margin-bottom:0px;
+	min-width:300px;
+}
+
 .container{
 	margin: auto;
 	width: 50%;
 	border: 7px solid var(--principal);
-	border-radius: 50px;
+	border-radius: 20px;
 	padding-bottom: 20px;
 }
+
 .input_id {
 	border:3px solid var(--principal);
 	border-radius:4px;
